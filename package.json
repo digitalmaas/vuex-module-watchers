@@ -1,0 +1,83 @@
+{
+  "name": "vuex-module-watchers",
+  "version": "0.0.0-semantic",
+  "description": "Simple module watchers for Vuex stores",
+  "author": "Ricardo Nolde <nolde@users.noreply.github.com>",
+  "type": "module",
+  "source": "src/index.js",
+  "main": "dist/vmw.cjs.js",
+  "module": "dist/vmw.esm.js",
+  "browser": "dist/vmw.umd.js",
+  "umd:main": "dist/vmw.umd.js",
+  "exports": "./dist/vmw.modern.mjs",
+  "files": [
+    "README.md",
+    "LICENSE",
+    "dist/"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "pretest": "npm run lint",
+    "test:unit": "jest",
+    "test": "npm run test:unit",
+    "lint": "eslint . --ext .js",
+    "release": "semantic-release",
+    "build": "cross-var microbundle --name VuexModuleWatchers --define VMW_VERSION=$npm_package_version"
+  },
+  "peerDependencies": {
+    "vuex": ">=3 <4"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "shvl": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "7.15.5",
+    "@babel/plugin-transform-runtime": "7.15.0",
+    "@babel/preset-env": "7.15.6",
+    "@commitlint/cli": "13.1.0",
+    "@commitlint/config-conventional": "13.1.0",
+    "@semantic-release/changelog": "5.0.1",
+    "@semantic-release/exec": "5.0.0",
+    "@semantic-release/git": "9.0.1",
+    "cross-var": "1.1.0",
+    "eslint": "7.32.0",
+    "eslint-config-standardize": "0.9.1",
+    "eslint-plugin-jest": "24.4.0",
+    "husky": "4.3.8",
+    "jest": "27.1.1",
+    "jest-spec-reporter": "1.0.17",
+    "lint-staged": "11.1.2",
+    "microbundle": "0.13.3",
+    "semantic-release": "17.4.7",
+    "vue": "2.6.14",
+    "vuex": "3.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitalmaas/vuex-module-watchers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/digitalmaas/vuex-module-watchers/issues"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue.js",
+    "vue2",
+    "vuex-plugin",
+    "vuex",
+    "plugin",
+    "vuejs2",
+    "watchers",
+    "rollup",
+    "javascript",
+    "browser"
+  ],
+  "engines": {
+    "node": ">=14.15",
+    "npm": ">=6"
+  },
+  "homepage": "https://github.com/digitalmaas/vuex-module-watchers#readme",
+  "license": "ISC"
+}

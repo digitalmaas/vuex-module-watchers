@@ -1,0 +1,14 @@
+{
+  "printWidth": 100,
+  "semi": false,
+  "singleQuote": true,
+  "quoteProps": "consistent",
+  "spaceBeforeFunctionParen": false,
+  "jsxSingleQuote": true,
+  "endOfLine": "lf",
+  "trailingComma": "none",
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "generatorStarSpacing": true,
+  "yieldStarSpacing": true
+}
