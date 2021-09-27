@@ -28,8 +28,7 @@ function prepareWatcherExpressionFunction (key) {
 }
 
 function prepareHandlerAndOptions (namespace, key, optionsOrFn) {
-  let options
-  let handler
+  let options, handler
   if (typeof optionsOrFn === 'function') {
     handler = optionsOrFn
   } else if (typeof optionsOrFn === 'object') {
@@ -38,8 +37,8 @@ function prepareHandlerAndOptions (namespace, key, optionsOrFn) {
       throw new TypeError(`invalid watcher handler in "${namespace}" for "${key}"`)
     }
     options = {
-      deep: get(optionsOrFn, 'deep', false),
-      immediate: get(optionsOrFn, 'immediate', false)
+      deep: Boolean(optionsOrFn.deep),
+      immediate: Boolean(optionsOrFn.immediate)
     }
   } else {
     throw new TypeError(`invalid watcher handler in "${namespace}" for "${key}"`)
@@ -62,6 +61,6 @@ export default function vuexWatcherPlugin (store) {
       store._tracker.setUnsubscribers(entry.namespace, unsubscribers)
     }
   } else {
-    setTimeout(() => vuexWatcherPlugin(store), 0) // Next-tick
+    setTimeout(() => vuexWatcherPlugin(store), 0) // next-tick
   }
 }

@@ -16,7 +16,10 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.test.{j,t}s?(x)', '**/__tests__/**/*.[jt]s?(x)', 'tests/**/*.js'],
-      extends: ['plugin:jest/recommended', 'plugin:jest/style']
+      extends: ['plugin:jest/recommended', 'plugin:jest/style'],
+      rules: {
+        'import/first': 0
+      }
     }
   ]
 }

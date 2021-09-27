@@ -1,3 +1,4 @@
+import 'regenerator-runtime/runtime.js'
 import WatcherTracker from './watcher-tracker.js'
 
 const assert = require('assert')

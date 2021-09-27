@@ -4,5 +4,6 @@ module.exports = {
   moduleFileExtensions: ['js'],
   collectCoverage: false,
   reporters: ['jest-spec-reporter'],
-  transform: { '\\.[jt]sx?$': 'babel-jest' }
+  transform: { '\\.[jt]sx?$': 'babel-jest' },
+  setupFiles: ['<rootDir>/test/unit-setup.js']
 }
