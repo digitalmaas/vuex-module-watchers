@@ -1,14 +1,12 @@
 .*/
 /*_*/
 
-dist/
+bundles/
+*.log
+*.log*
 *.orig
 *.tgz
 test.*.json
-
-# common log files
-npm-debug.log*
-selenium-debug.log
 
 # common editor and system directories and files
 .DS_Store

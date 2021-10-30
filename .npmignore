@@ -5,4 +5,6 @@
 !package.json
 !README.md
 !LICENSE
-!dist/
+!bundles/
+!lib/**/*.js
+lib/**/*.test.js
